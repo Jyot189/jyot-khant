@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { User, Smartphone, Code2, Layers, Cpu, CheckCircle, GraduationCap, MapPin, Globe, Sparkles } from "lucide-react";
+import { User, Smartphone, Code2, Layers, Zap, CheckCircle, GraduationCap, MapPin, Globe, Sparkles } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function About() {
@@ -9,9 +9,9 @@ export default function About() {
 
   const iconMap: Record<string, React.ReactNode> = {
     Smartphone: <Smartphone className="w-6 h-6 text-cyan-400" />,
-    Code2: <Code2 className="w-6 h-6 text-sky-400" />,
+    Zap: <Zap className="w-6 h-6 text-amber-400" />,
     Layers: <Layers className="w-6 h-6 text-indigo-400" />,
-    Cpu: <Cpu className="w-6 h-6 text-emerald-400" />,
+    Code2: <Code2 className="w-6 h-6 text-sky-400" />,
   };
 
   return (
@@ -30,7 +30,7 @@ export default function About() {
             Engineering High-Performance Mobile Experiences
           </h2>
           <p className="mt-3 text-slate-400 max-w-2xl text-base sm:text-lg">
-            Get to know my engineering background, mobile craftsmanship, and academic foundation.
+            Cross-platform mobile specialist delivering native-grade iOS &amp; Android apps, Shorebird OTA code push, and scalable architectures.
           </p>
         </div>
 
@@ -51,46 +51,50 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-200">
                 <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Shorebird OTA Code Push</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-slate-200">
+                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>Native Android (Kotlin &amp; MVVM)</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-200">
                 <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>BLoC, GetX &amp; Riverpod State</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-slate-200">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Automated CI/CD with CodeMagic</span>
+                <span>BLoC, GetX &amp; Riverpod</span>
               </div>
             </div>
 
-            {/* Academic & Location Cards */}
-            <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
+            {/* University Degree Card */}
+            <div className="mt-4 pt-4 border-t border-white/10 space-y-2">
               <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block">
-                Education &amp; Background:
+                Higher Education:
               </span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {education.map((edu) => (
-                  <div
-                    key={edu.id}
-                    className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between text-xs text-cyan-400 font-semibold mb-1">
-                        <span>{edu.period}</span>
-                        <span className="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 font-mono text-[10px]">
-                          {edu.grade}
-                        </span>
-                      </div>
-                      <h4 className="text-xs font-bold text-white leading-tight">
-                        {edu.degree}
-                      </h4>
-                      <p className="text-[11px] text-slate-400 mt-1">
-                        {edu.institution}
-                      </p>
-                    </div>
+              {education.map((edu) => (
+                <div
+                  key={edu.id}
+                  className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-4 hover:border-cyan-500/30 transition-colors"
+                >
+                  <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 shrink-0 mt-0.5">
+                    <GraduationCap className="w-6 h-6" />
                   </div>
-                ))}
-              </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center justify-between gap-1 mb-1">
+                      <span className="text-xs font-bold text-cyan-400">{edu.period}</span>
+                      <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 font-mono text-xs font-bold border border-cyan-500/30">
+                        {edu.grade}
+                      </span>
+                    </div>
+                    <h4 className="text-sm font-bold text-white">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-xs text-slate-300 mt-0.5 font-medium">
+                      {edu.institution}
+                    </p>
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                      {edu.details}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Location & Language pill */}

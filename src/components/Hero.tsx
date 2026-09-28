@@ -152,7 +152,7 @@ export default function Hero() {
                       <span className="text-slate-400">frameworks:</span> [
                       <span className="text-cyan-300">&quot;Flutter&quot;</span>,{" "}
                       <span className="text-cyan-300">&quot;Android SDK&quot;</span>,{" "}
-                      <span className="text-cyan-300">&quot;Firebase&quot;</span>],
+                      <span className="text-cyan-300">&quot;Shorebird&quot;</span>],
                     </p>
                     <p>
                       <span className="text-slate-400">stateArchitecture:</span> [

@@ -80,11 +80,11 @@ export const portfolioData: PortfolioData = {
     name: "Jyot Khant",
     role: "Mobile App Developer",
     tagline:
-      "Passionate cross-platform mobile application developer crafting high-performance, elegant, and maintainable iOS & Android applications using Flutter, Dart, Kotlin, and modern state architectures.",
+      "Passionate cross-platform mobile application developer crafting high-performance, elegant iOS & Android applications using Flutter, Dart, Kotlin, Shorebird Code Push, and modern state architectures.",
     about: [
-      "I am a passionate Mobile Application Developer who loves writing expressive, elegant, and maintainable code. With hands-on industry experience at ESparkBiz Technologies, I specialize in building smooth, scalable, and cross-platform apps for iOS and Android.",
-      "As an experienced Flutter developer, I am deeply proficient in Dart with industry-proven state management solutions like GetX, BLoC, and Riverpod. I pride myself on crafting intuitive, responsive UI/UX that feels natural and delivers consistent 60/120fps performance.",
-      "In native Android development, I leverage Kotlin and the MVVM architecture to architect robust background processes and resilient data pipelines. From Firebase integrations and RESTful APIs to automated CI/CD pipelines with CodeMagic, I deliver end-to-end mobile solutions from design to store deployment.",
+      "I am a passionate Mobile Application Developer who loves writing expressive, elegant, and maintainable code. With hands-on industry experience at ESparkBiz Technologies, I specialize in building smooth, scalable, and cross-platform apps deployed to both iOS (App Store) and Android (Google Play Store).",
+      "As an experienced Flutter developer, I am proficient in Dart with industry-proven state management solutions like GetX, BLoC, and Riverpod. I integrate cutting-edge tools like Shorebird for instant over-the-air (OTA) code updates, ensuring continuous zero-downtime hotfixes without waiting for app store review delays.",
+      "In native Android development, I leverage Kotlin and the MVVM architecture to build scalable, responsive, and robust mobile systems. From commercial deployments like PackTamam (Android & iOS) to accessibility-driven AI projects, I take full ownership from initial concept to store launch.",
     ],
     location: "Valsad, Gujarat, India",
     email: "jyotkhant2002@gmail.com",
@@ -111,14 +111,14 @@ export const portfolioData: PortfolioData = {
       description: "Optimized render pipelines",
     },
     {
-      value: "2+",
-      label: "Core Platforms",
-      description: "Android (Kotlin) & iOS (Flutter)",
+      value: "Both",
+      label: "Android & iOS Deployed",
+      description: "Play Store & App Store live",
     },
     {
-      value: "100%",
-      label: "Quality & Testing",
-      description: "Clean MVVM & BLoC state",
+      value: "OTA",
+      label: "Shorebird Code Push",
+      description: "Instant over-the-air updates",
     },
   ],
   education: [
@@ -129,16 +129,7 @@ export const portfolioData: PortfolioData = {
       period: "2020 - 2024",
       grade: "CGPA: 8.48",
       details:
-        "Comprehensive coursework in Mobile Application Development, Data Structures, OOP, Database Systems, Operating Systems, and Software Engineering.",
-    },
-    {
-      id: "edu-2",
-      degree: "Higher Secondary Education (Science)",
-      institution: "Sett R. J. J. High School (GSHSEB)",
-      period: "2018 - 2020",
-      grade: "Percentile: 83.12 PR",
-      details:
-        "Focused study in Mathematics, Physics, and Computer Sciences with honors academic ranking.",
+        "Specialized in Mobile Application Engineering, Data Structures, Algorithms, Object-Oriented Architecture, Database Management Systems, and Software Engineering.",
     },
   ],
   skillCategories: [
@@ -147,9 +138,10 @@ export const portfolioData: PortfolioData = {
       skills: [
         { name: "Flutter", level: "Expert" },
         { name: "Dart", level: "Expert" },
+        { name: "Shorebird (Code Push)", level: "Advanced" },
         { name: "Kotlin", level: "Advanced" },
         { name: "Android SDK", level: "Advanced" },
-        { name: "iOS Deployment", level: "Proficient" },
+        { name: "iOS Deployment", level: "Expert" },
       ],
     },
     {
@@ -173,12 +165,13 @@ export const portfolioData: PortfolioData = {
       ],
     },
     {
-      title: "DevOps, CI/CD & Tools",
+      title: "DevOps, CI/CD & OTA Tools",
       skills: [
+        { name: "Shorebird (OTA Code Push)", level: "Expert" },
         { name: "CodeMagic CI/CD", level: "Advanced" },
         { name: "Git & GitHub", level: "Advanced" },
         { name: "Android Studio", level: "Expert" },
-        { name: "VS Code", level: "Expert" },
+        { name: "Xcode & TestFlight", level: "Advanced" },
         { name: "Postman API Testing", level: "Advanced" },
       ],
     },
@@ -192,13 +185,14 @@ export const portfolioData: PortfolioData = {
       location: "India",
       type: "Full-Time",
       description: [
-        "Developing high-performance cross-platform mobile applications in Flutter for Android and iOS devices.",
-        "Architecting robust and maintainable mobile systems using Dart with BLoC and GetX state management solutions.",
+        "Developing high-performance cross-platform mobile applications in Flutter deployed to both Android and iOS platforms.",
+        "Integrating Shorebird Code Push to deliver instant over-the-air hotfixes and feature updates directly to users without app store delays.",
+        "Architecting robust mobile applications using Dart with BLoC and GetX state management patterns.",
         "Integrating secure REST APIs, Firebase real-time database, cloud authentication, and push notifications.",
         "Configuring and managing automated mobile CI/CD build and release workflows using CodeMagic.",
         "Profiling app performance, minimizing memory leaks, and achieving silky smooth 60fps animations.",
       ],
-      technologies: ["Flutter", "Dart", "BLoC", "GetX", "Firebase", "CodeMagic", "REST APIs", "Git"],
+      technologies: ["Flutter", "Dart", "Shorebird", "BLoC", "GetX", "Firebase", "CodeMagic", "REST APIs", "Git"],
     },
     {
       id: "exp-2",
@@ -217,6 +211,25 @@ export const portfolioData: PortfolioData = {
     },
   ],
   projects: [
+    {
+      id: "proj-packtamam",
+      title: "PackTamam Mobile App (Android & iOS)",
+      subtitle: "Commercial Packaging & Food Packaging Solutions Ecosystem",
+      description:
+        "Production cross-platform mobile application developed and deployed to both Google Play Store (Android) and Apple App Store (iOS) for PackTamam (packtamam.com). Enables businesses and customers to explore innovative packaging solutions, access real-time product catalogs, submit packaging inquiries, and track orders.",
+      category: "Mobile (Flutter)",
+      tags: ["Flutter", "Dart", "Android Deployed", "iOS Deployed", "Shorebird", "Firebase", "REST APIs"],
+      githubUrl: "https://github.com/Jyot189",
+      liveUrl: "https://www.packtamam.com/",
+      featured: true,
+      highlights: [
+        "Architected, developed, and deployed to both Google Play Store (Android) and Apple App Store (iOS)",
+        "Integrated Shorebird Code Push for instant over-the-air (OTA) updates and bug hotfixes without store approval delays",
+        "Crafted a fluid, responsive 60fps catalog experience with advanced product filtering and image caching",
+        "Seamless REST API and Firebase integration for real-time packaging inquiries and notifications",
+      ],
+      stats: "Live on Android & iOS",
+    },
     {
       id: "proj-1",
       title: "American Sign Language (ASL) Learning App",
@@ -306,28 +319,28 @@ export const portfolioData: PortfolioData = {
   ],
   services: [
     {
-      title: "Cross-Platform App Development",
+      title: "Cross-Platform App (Android & iOS)",
       description:
-        "End-to-end mobile applications built with Flutter and Dart, delivering native-grade iOS & Android performance from a single expressive codebase.",
+        "End-to-end mobile applications built with Flutter & Dart, deployed to Google Play Store & Apple App Store with native 60fps performance.",
       icon: "Smartphone",
     },
     {
-      title: "Native Android (Kotlin & MVVM)",
+      title: "Shorebird OTA Code Push",
       description:
-        "Scalable native Android engineering with Kotlin, Coroutines, Room DB, and clean architectural patterns for maximum responsiveness.",
-      icon: "Code2",
+        "Instant over-the-air Flutter updates and instant hotfixes with Shorebird, skipping prolonged app store review bottlenecks.",
+      icon: "Zap",
     },
     {
-      title: "State Management Architecture",
+      title: "State Management & Architecture",
       description:
         "Production-grade state solutions utilizing BLoC, GetX, and Riverpod to guarantee predictable, bug-free, and testable app logic.",
       icon: "Layers",
     },
     {
-      title: "Firebase & CI/CD Cloud Automation",
+      title: "Native Android (Kotlin & MVVM)",
       description:
-        "Seamless cloud backends with Firebase (Auth, Firestore, Cloud Messaging) and automated build & release pipelines with CodeMagic.",
-      icon: "Cpu",
+        "Clean MVVM native Android architecture with Kotlin, Coroutines, Room local DB, and seamless RESTful API network integration.",
+      icon: "Code2",
     },
   ],
 };
