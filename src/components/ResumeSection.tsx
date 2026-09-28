@@ -204,6 +204,7 @@ export default function ResumeSection() {
                 src={personal.resumePreviewImg}
                 alt="Jyot Khant Full Resume Preview"
                 fill
+                sizes="(max-width: 768px) 100vw, 800px"
                 className="object-contain"
               />
             </div>
