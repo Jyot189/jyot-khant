@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { Download, ArrowRight, Mail, Sparkles, Terminal, Code2, CheckCircle2 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { Download, ArrowRight, Mail, Sparkles, Terminal, Code2, CheckCircle2, Phone } from "lucide-react";
+import { LinkedinIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Hero() {
@@ -77,15 +77,6 @@ export default function Hero() {
               </span>
               <div className="flex items-center gap-3">
                 <a
-                  href={personal.socials.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 text-slate-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors"
-                  aria-label="GitHub"
-                >
-                  <GithubIcon className="w-5 h-5" />
-                </a>
-                <a
                   href={personal.socials.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -100,6 +91,13 @@ export default function Hero() {
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
+                </a>
+                <a
+                  href={personal.socials.phone}
+                  className="p-2 text-slate-400 hover:text-emerald-400 hover:bg-white/5 rounded-lg transition-colors"
+                  aria-label="Phone"
+                >
+                  <Phone className="w-5 h-5" />
                 </a>
               </div>
             </div>

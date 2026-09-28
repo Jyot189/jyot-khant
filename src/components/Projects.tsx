@@ -1,18 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import { FolderGit2, ExternalLink, Sparkles, CheckCircle2, Smartphone, Globe } from "lucide-react";
-import { GithubIcon } from "@/components/Icons";
+import React from "react";
+import { FolderGit2, ExternalLink, Sparkles, CheckCircle2, Smartphone, ShieldCheck, Heart } from "lucide-react";
 import { portfolioData, Project } from "@/data/portfolioData";
 
 export default function Projects() {
   const { projects } = portfolioData;
-  const [filter, setFilter] = useState<string>("All");
-
-  const categories = ["All", "Mobile (Flutter)", "Android (Kotlin)", "Cross-Platform", "Accessibility & AI"];
-
-  const filteredProjects =
-    filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden bg-slate-950/60">
@@ -23,87 +16,63 @@ export default function Projects() {
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            <FolderGit2 className="w-3.5 h-3.5" />
-            <span>Featured Portfolio</span>
+            <Smartphone className="w-3.5 h-3.5" />
+            <span>Featured Mobile Apps</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Mobile Apps &amp; Production Deployments
+            Production &amp; Flagship Projects
           </h2>
           <p className="mt-3 text-slate-400 max-w-2xl text-base sm:text-lg">
-            Commercial applications deployed on Android &amp; iOS, accessibility projects, and high-performance mobile systems.
+            High-impact mobile applications deployed on Google Play Store &amp; Apple App Store, and accessibility-first inclusive software.
           </p>
-
-          {/* Filter Pills */}
-          <div className="mt-8 flex flex-wrap justify-center gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all ${
-                  filter === cat
-                    ? "bg-cyan-500 text-white shadow-lg shadow-cyan-500/25"
-                    : "bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/5"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredProjects.map((project: Project) => (
+        {/* 2 Flagship Projects Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {projects.map((project: Project) => (
             <div
               key={project.id}
-              className={`p-6 rounded-2xl glass-card glass-card-hover border flex flex-col justify-between group ${
-                project.featured
-                  ? "border-cyan-500/30 shadow-lg shadow-cyan-500/5"
-                  : "border-white/10"
-              }`}
+              className="p-7 sm:p-8 rounded-3xl glass-card glass-card-hover border border-cyan-500/30 flex flex-col justify-between group shadow-xl shadow-cyan-500/5 relative overflow-hidden"
             >
+              {/* Top ambient highlight glow */}
+              <div className="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all pointer-events-none" />
+
               <div>
                 {/* Header: Category + Featured & Stats Pill */}
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
                     {project.category}
                   </span>
 
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-2">
                     {project.stats && (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                        <Smartphone className="w-3 h-3 text-emerald-400" />
+                      <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                        <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
                         {project.stats}
-                      </span>
-                    )}
-                    {project.featured && (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                        <Sparkles className="w-3 h-3 text-amber-300" />
-                        Featured
                       </span>
                     )}
                   </div>
                 </div>
 
                 {/* Title & Subtitle */}
-                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-xs text-cyan-300/80 font-medium mt-1 mb-3">
+                <p className="text-xs text-cyan-300/90 font-medium mt-1 mb-4">
                   {project.subtitle}
                 </p>
 
                 {/* Description */}
-                <p className="text-sm text-slate-300 leading-relaxed mb-4">
+                <p className="text-sm text-slate-300 leading-relaxed mb-5">
                   {project.description}
                 </p>
 
                 {/* Key Highlights */}
                 {project.highlights && project.highlights.length > 0 && (
-                  <div className="space-y-1.5 mb-5 pt-3 border-t border-white/5">
+                  <div className="space-y-2 mb-6 pt-4 border-t border-white/5">
                     {project.highlights.map((h, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-slate-400">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400/80 shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-2.5 text-xs text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                         <span>{h}</span>
                       </div>
                     ))}
@@ -114,13 +83,13 @@ export default function Projects() {
               {/* Card Footer: Tech tags + Links */}
               <div>
                 {/* Tags */}
-                <div className="flex flex-wrap gap-1.5 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className={`text-[11px] font-mono px-2 py-0.5 rounded border ${
+                      className={`text-xs font-mono px-2.5 py-1 rounded-lg border ${
                         tag.includes("Deployed") || tag.includes("Shorebird")
-                          ? "bg-cyan-500/15 text-cyan-300 border-cyan-500/30 font-semibold"
+                          ? "bg-cyan-500/20 text-cyan-200 border-cyan-500/40 font-semibold"
                           : "bg-white/5 text-slate-300 border-white/5"
                       }`}
                     >
@@ -129,31 +98,28 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors"
-                  >
-                    <GithubIcon className="w-4 h-4" />
-                    Source Code
-                  </a>
-
-                  {project.liveUrl && (
+                {/* Action Buttons (Zero Github Links) */}
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                  {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-md shadow-cyan-500/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
                     >
-                      <span>
-                        {project.id === "proj-packtamam" ? "Visit PackTamam" : "Live Preview"}
-                      </span>
-                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>Visit PackTamam Official Website</span>
+                      <ExternalLink className="w-4 h-4" />
                     </a>
+                  ) : (
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-500/30">
+                      <Heart className="w-3.5 h-3.5 text-rose-400" />
+                      <span>Inclusive Accessibility Engineering</span>
+                    </div>
                   )}
+
+                  <span className="text-xs text-slate-400 font-mono">
+                    Flutter • Dart
+                  </span>
                 </div>
               </div>
             </div>

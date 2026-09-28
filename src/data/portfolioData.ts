@@ -3,9 +3,8 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
-  category: "Mobile (Flutter)" | "Android (Kotlin)" | "Cross-Platform" | "Accessibility & AI";
+  category: "Mobile (Flutter)" | "Cross-Platform" | "Accessibility & EdTech";
   tags: string[];
-  githubUrl: string;
   liveUrl?: string;
   featured: boolean;
   highlights: string[];
@@ -18,7 +17,7 @@ export interface Experience {
   company: string;
   period: string;
   location: string;
-  type: "Full-Time" | "Internship" | "Contract" | "Open Source";
+  type: "Full-Time" | "Internship" | "Contract";
   description: string[];
   technologies: string[];
 }
@@ -53,7 +52,6 @@ export interface PortfolioData {
     resumeUrl: string;
     resumePreviewImg: string;
     socials: {
-      github: string;
       linkedin: string;
       email: string;
       phone: string;
@@ -84,7 +82,7 @@ export const portfolioData: PortfolioData = {
     about: [
       "I am a passionate Mobile Application Developer who loves writing expressive, elegant, and maintainable code. With hands-on industry experience at ESparkBiz Technologies, I specialize in building smooth, scalable, and cross-platform apps deployed to both iOS (App Store) and Android (Google Play Store).",
       "As an experienced Flutter developer, I am proficient in Dart with industry-proven state management solutions like GetX, BLoC, and Riverpod. I integrate cutting-edge tools like Shorebird for instant over-the-air (OTA) code updates, ensuring continuous zero-downtime hotfixes without waiting for app store review delays.",
-      "In native Android development, I leverage Kotlin and the MVVM architecture to build scalable, responsive, and robust mobile systems. From commercial deployments like PackTamam (Android & iOS) to accessibility-driven AI projects, I take full ownership from initial concept to store launch.",
+      "In native Android development, I leverage Kotlin and the MVVM architecture to build scalable, responsive, and robust mobile systems. From commercial deployments like PackTamam (Android & iOS) to accessibility-driven EdTech apps, I take full ownership from initial concept to store launch.",
     ],
     location: "Valsad, Gujarat, India",
     email: "jyotkhant2002@gmail.com",
@@ -93,7 +91,6 @@ export const portfolioData: PortfolioData = {
     resumeUrl: "/jyot_khant_resume.pdf",
     resumePreviewImg: "/resume-preview.png",
     socials: {
-      github: "https://github.com/Jyot189",
       linkedin: "https://www.linkedin.com/in/jyot-khant",
       email: "mailto:jyotkhant2002@gmail.com",
       phone: "tel:+919725888368",
@@ -165,14 +162,14 @@ export const portfolioData: PortfolioData = {
       ],
     },
     {
-      title: "DevOps, CI/CD & OTA Tools",
+      title: "DevOps, CI/CD & Mobile Tools",
       skills: [
         { name: "Shorebird (OTA Code Push)", level: "Expert" },
         { name: "CodeMagic CI/CD", level: "Advanced" },
-        { name: "Git & GitHub", level: "Advanced" },
         { name: "Android Studio", level: "Expert" },
         { name: "Xcode & TestFlight", level: "Advanced" },
         { name: "Postman API Testing", level: "Advanced" },
+        { name: "App Store & Play Store Release", level: "Expert" },
       ],
     },
   ],
@@ -192,7 +189,7 @@ export const portfolioData: PortfolioData = {
         "Configuring and managing automated mobile CI/CD build and release workflows using CodeMagic.",
         "Profiling app performance, minimizing memory leaks, and achieving silky smooth 60fps animations.",
       ],
-      technologies: ["Flutter", "Dart", "Shorebird", "BLoC", "GetX", "Firebase", "CodeMagic", "REST APIs", "Git"],
+      technologies: ["Flutter", "Dart", "Shorebird", "BLoC", "GetX", "Firebase", "CodeMagic", "REST APIs"],
     },
     {
       id: "exp-2",
@@ -207,7 +204,7 @@ export const portfolioData: PortfolioData = {
         "Implemented local database caching using Room and SQLite for offline accessibility.",
         "Collaborated with senior engineers on code reviews, bug fixes, and responsive UI optimization.",
       ],
-      technologies: ["Kotlin", "Android SDK", "MVVM", "Flutter", "Dart", "Room DB", "Git"],
+      technologies: ["Kotlin", "Android SDK", "MVVM", "Flutter", "Dart", "Room DB"],
     },
   ],
   projects: [
@@ -219,7 +216,6 @@ export const portfolioData: PortfolioData = {
         "Production cross-platform mobile application developed and deployed to both Google Play Store (Android) and Apple App Store (iOS) for PackTamam (packtamam.com). Enables businesses and customers to explore innovative packaging solutions, access real-time product catalogs, submit packaging inquiries, and track orders.",
       category: "Mobile (Flutter)",
       tags: ["Flutter", "Dart", "Android Deployed", "iOS Deployed", "Shorebird", "Firebase", "REST APIs"],
-      githubUrl: "https://github.com/Jyot189",
       liveUrl: "https://www.packtamam.com/",
       featured: true,
       highlights: [
@@ -231,14 +227,13 @@ export const portfolioData: PortfolioData = {
       stats: "Live on Android & iOS",
     },
     {
-      id: "proj-1",
+      id: "proj-asl",
       title: "American Sign Language (ASL) Learning App",
       subtitle: "Cross-Platform Inclusive EdTech Mobile Application",
       description:
         "A cross-platform mobile application designed to help users learn and practice American Sign Language through interactive lessons, HD video demonstrations, and quizzes. Engineered with accessibility-first UI and performance optimization to bridge communication gaps between hearing and deaf individuals.",
-      category: "Accessibility & AI",
+      category: "Accessibility & EdTech",
       tags: ["Flutter", "Dart", "Firebase", "BLoC / GetX", "Video Player", "Accessibility"],
-      githubUrl: "https://github.com/Jyot189",
       featured: true,
       highlights: [
         "Interactive gamified lessons with curated video sign demonstrations",
@@ -247,74 +242,6 @@ export const portfolioData: PortfolioData = {
         "Offline lesson caching for continuous learning anywhere",
       ],
       stats: "In Active Development",
-    },
-    {
-      id: "proj-2",
-      title: "PulseStore - E-Commerce Mobile App",
-      subtitle: "High-Performance Cross-Platform Shopping App",
-      description:
-        "Modern mobile storefront built with Flutter featuring real-time product catalogs, instant category filtering, persistent shopping cart, and mock checkout workflows.",
-      category: "Mobile (Flutter)",
-      tags: ["Flutter", "Dart", "Firebase", "GetX", "REST APIs"],
-      githubUrl: "https://github.com/Jyot189",
-      featured: true,
-      highlights: [
-        "Instant search & multi-attribute filter with sub-100ms response",
-        "Persistent cart and favorites with GetX reactive state",
-        "Integrated Firebase Authentication with Google Sign-In",
-      ],
-      stats: "60 FPS Fluid Animations",
-    },
-    {
-      id: "proj-3",
-      title: "ConnectPulse - Realtime Messaging App",
-      subtitle: "Cross-Platform Chat Application with Push Notifications",
-      description:
-        "Full-featured mobile chat client supporting real-time direct messaging, online presence indicators, media sharing, and push notifications via Firebase Cloud Messaging.",
-      category: "Cross-Platform",
-      tags: ["Flutter", "Dart", "Firebase Firestore", "Riverpod", "FCM"],
-      githubUrl: "https://github.com/Jyot189",
-      featured: true,
-      highlights: [
-        "Real-time message streaming powered by Firestore Listeners",
-        "Unread message badges and instant FCM push notifications",
-        "Lightweight media compression prior to cloud upload",
-      ],
-      stats: "Realtime Firebase Sync",
-    },
-    {
-      id: "proj-4",
-      title: "Native Android NewsFeed (Kotlin MVVM)",
-      subtitle: "Clean Architecture News Reader Application",
-      description:
-        "Native Android app architected in Kotlin following MVVM and Clean Architecture standards, leveraging Retrofit for REST APIs and Room for offline database caching.",
-      category: "Android (Kotlin)",
-      tags: ["Kotlin", "Android SDK", "MVVM", "Retrofit", "Room DB", "Coroutines"],
-      githubUrl: "https://github.com/Jyot189",
-      featured: false,
-      highlights: [
-        "Clean MVVM separation of concerns with LiveData & Coroutines",
-        "Offline-first architecture with automatic Room database caching",
-        "Material You dynamic theming and edge-to-edge layout",
-      ],
-      stats: "100% Kotlin Native",
-    },
-    {
-      id: "proj-5",
-      title: "HabitForge - Daily Productivity & Habit Tracker",
-      subtitle: "Offline-First Habit Tracking Mobile App",
-      description:
-        "Intuitive habit and daily goal tracker built with Flutter, featuring visual streak charts, local reminders, and zero cloud dependency for complete privacy.",
-      category: "Mobile (Flutter)",
-      tags: ["Flutter", "Dart", "BLoC", "Hive Storage", "Local Notifications"],
-      githubUrl: "https://github.com/Jyot189",
-      featured: false,
-      highlights: [
-        "Ultra-fast local storage using Hive NoSQL key-value store",
-        "Visual streak calendars and completion percentage statistics",
-        "Customizable scheduled local push alerts",
-      ],
-      stats: "Zero Cloud Latency",
     },
   ],
   services: [

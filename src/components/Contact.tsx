@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Mail, MapPin, Send, CheckCircle2, Copy, Check, Phone } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { LinkedinIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Contact() {
@@ -124,21 +124,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Social Channels Card */}
+              {/* Professional Profiles Card */}
               <div className="p-5 rounded-2xl glass-card border border-white/10">
                 <span className="text-xs text-slate-400 block font-medium mb-3">
-                  Online Profiles
+                  Professional Channels
                 </span>
                 <div className="flex items-center gap-3">
-                  <a
-                    href={personal.socials.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-200 hover:text-cyan-400 transition-colors"
-                  >
-                    <GithubIcon className="w-4 h-4" />
-                    <span>GitHub</span>
-                  </a>
                   <a
                     href={personal.socials.linkedin}
                     target="_blank"
@@ -146,7 +137,14 @@ export default function Contact() {
                     className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-200 hover:text-cyan-400 transition-colors"
                   >
                     <LinkedinIcon className="w-4 h-4" />
-                    <span>LinkedIn</span>
+                    <span>LinkedIn Profile</span>
+                  </a>
+                  <a
+                    href={personal.socials.phone}
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Call / WhatsApp</span>
                   </a>
                 </div>
               </div>

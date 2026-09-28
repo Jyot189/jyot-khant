@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Download, Menu, X, Mail, Sparkles } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { Download, Menu, X, Mail, Sparkles, Phone } from "lucide-react";
+import { LinkedinIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Navbar() {
@@ -68,15 +68,6 @@ export default function Navbar() {
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href={portfolioData.personal.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-              className="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-            >
-              <GithubIcon className="w-5 h-5" />
-            </a>
-            <a
               href={portfolioData.personal.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -84,6 +75,13 @@ export default function Navbar() {
               className="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
             >
               <LinkedinIcon className="w-5 h-5" />
+            </a>
+            <a
+              href={portfolioData.personal.socials.email}
+              aria-label="Email"
+              className="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+            >
+              <Mail className="w-5 h-5" />
             </a>
             <a
               href={portfolioData.personal.resumeUrl}
@@ -132,15 +130,6 @@ export default function Navbar() {
             </div>
             <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-around">
               <a
-                href={portfolioData.personal.socials.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-slate-300 hover:text-cyan-400"
-              >
-                <GithubIcon className="w-4 h-4" />
-                GitHub
-              </a>
-              <a
                 href={portfolioData.personal.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -155,6 +144,13 @@ export default function Navbar() {
               >
                 <Mail className="w-4 h-4" />
                 Email
+              </a>
+              <a
+                href={`tel:${portfolioData.personal.phone.replace(/[^0-9+]/g, "")}`}
+                className="flex items-center gap-2 text-sm text-slate-300 hover:text-cyan-400"
+              >
+                <Phone className="w-4 h-4" />
+                Call
               </a>
             </div>
           </div>

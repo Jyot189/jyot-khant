@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { ArrowUp, Mail, Heart } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { ArrowUp, Mail, Phone, Heart } from "lucide-react";
+import { LinkedinIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
                 {personal.name}
               </span>
               <span className="text-xs text-slate-400">
-                Software Engineer &amp; Full-Stack Developer
+                Mobile App Developer (Flutter &amp; Android)
               </span>
             </div>
           </div>
@@ -34,15 +34,6 @@ export default function Footer() {
           {/* Socials & Back to Top */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
-              <a
-                href={personal.socials.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-              >
-                <GithubIcon className="w-5 h-5" />
-              </a>
               <a
                 href={personal.socials.linkedin}
                 target="_blank"
@@ -58,6 +49,13 @@ export default function Footer() {
                 className="p-2 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
               >
                 <Mail className="w-5 h-5" />
+              </a>
+              <a
+                href={personal.socials.phone}
+                aria-label="Phone"
+                className="p-2 text-slate-400 hover:text-emerald-400 hover:bg-white/5 rounded-lg transition-colors"
+              >
+                <Phone className="w-5 h-5" />
               </a>
             </div>
 
@@ -76,7 +74,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Jyot Khant. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
-            Designed &amp; Built with Next.js, TypeScript &amp; Tailwind CSS
+            Crafted with Next.js, TypeScript &amp; Tailwind CSS
           </p>
         </div>
       </div>
