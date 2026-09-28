@@ -71,11 +71,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright line */}
-        <div className="mt-8 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-center text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Jyot Khant. All rights reserved.</p>
-          <p className="flex items-center gap-1.5">
-            Crafted with Next.js, TypeScript &amp; Tailwind CSS
-          </p>
         </div>
       </div>
     </footer>
