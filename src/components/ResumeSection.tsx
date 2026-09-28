@@ -82,7 +82,7 @@ export default function ResumeSection() {
                 <div className="flex flex-wrap items-center gap-2.5">
                   <a
                     href={personal.resumeUrl}
-                    download="Jyot_Khant_Resume.pdf"
+                    download="Jyot_Khant_Resume_Simple.pdf"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-lg shadow-cyan-500/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <Download className="w-4 h-4" />
@@ -185,7 +185,7 @@ export default function ResumeSection() {
               <div className="flex items-center gap-2">
                 <a
                   href={personal.resumeUrl}
-                  download="Jyot_Khant_Resume.pdf"
+                  download="Jyot_Khant_Resume_Simple.pdf"
                   className="px-3 py-1 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold rounded-lg flex items-center gap-1.5"
                 >
                   <Download className="w-3.5 h-3.5" />

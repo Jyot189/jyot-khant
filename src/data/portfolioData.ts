@@ -89,8 +89,8 @@ export const portfolioData: PortfolioData = {
     email: "jyotkhant2002@gmail.com",
     phone: "(+91) 9725888368",
     status: "Mobile App Developer at ESparkBiz Technologies",
-    resumeUrl: "/Jyot_Khant_Mobile_Developer_Resume.pdf",
-    resumePreviewImg: "/resume-preview-v2.png",
+    resumeUrl: "/Jyot_Khant_Resume_Simple.pdf",
+    resumePreviewImg: "/resume-preview-simple.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/jyot-khant",
       email: "mailto:jyotkhant2002@gmail.com",

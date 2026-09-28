@@ -85,7 +85,7 @@ export default function Navbar() {
             </a>
             <a
               href={portfolioData.personal.resumeUrl}
-              download="Jyot_Khant_Resume.pdf"
+              download="Jyot_Khant_Resume_Simple.pdf"
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 rounded-lg shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <Download className="w-4 h-4" />
@@ -97,7 +97,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-2">
             <a
               href={portfolioData.personal.resumeUrl}
-              download="Jyot_Khant_Resume.pdf"
+              download="Jyot_Khant_Resume_Simple.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg"
             >
               <Download className="w-3.5 h-3.5" />
