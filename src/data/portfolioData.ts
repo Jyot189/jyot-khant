@@ -237,6 +237,7 @@ export const portfolioData: PortfolioData = {
         "Live cross-platform mobile application deployed on iOS and Android designed to help users learn and practice American Sign Language through interactive lessons, HD video demonstrations, and quizzes. Features seamless In-App Purchases (IAP) & recurring subscriptions for premium lessons, personalized progress tracking, and inclusive accessibility.",
       category: "Accessibility & EdTech",
       tags: ["Flutter", "Dart", "iOS & Android Live", "In-App Purchases (IAP)", "StoreKit Subscriptions", "Firebase", "Accessibility"],
+      liveUrl: "https://theaslshop.com/",
       featured: true,
       highlights: [
         "Live production mobile app with complete iOS and Android deployments",
