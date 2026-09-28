@@ -135,31 +135,37 @@ export default function Hero() {
                       <span className="text-emerald-300">&quot;Jyot Khant&quot;</span>,
                     </p>
                     <p>
-                      <span className="text-slate-400">title:</span>{" "}
-                      <span className="text-emerald-300">&quot;Full-Stack Engineer&quot;</span>,
+                      <span className="text-slate-400">role:</span>{" "}
+                      <span className="text-emerald-300">&quot;Mobile App Developer&quot;</span>,
                     </p>
                     <p>
-                      <span className="text-slate-400">location:</span>{" "}
-                      <span className="text-emerald-300">&quot;Gujarat, India&quot;</span>,
+                      <span className="text-slate-400">company:</span>{" "}
+                      <span className="text-cyan-300">&quot;ESparkBiz Technologies&quot;</span>,
                     </p>
                     <p>
                       <span className="text-slate-400">languages:</span> [
-                      <span className="text-amber-300">&quot;TypeScript&quot;</span>,{" "}
-                      <span className="text-amber-300">&quot;JavaScript&quot;</span>,{" "}
-                      <span className="text-amber-300">&quot;Python&quot;</span>],
+                      <span className="text-amber-300">&quot;Dart&quot;</span>,{" "}
+                      <span className="text-amber-300">&quot;Kotlin&quot;</span>,{" "}
+                      <span className="text-amber-300">&quot;Java&quot;</span>],
                     </p>
                     <p>
                       <span className="text-slate-400">frameworks:</span> [
-                      <span className="text-cyan-300">&quot;Next.js&quot;</span>,{" "}
-                      <span className="text-cyan-300">&quot;React&quot;</span>,{" "}
-                      <span className="text-cyan-300">&quot;Node.js&quot;</span>],
+                      <span className="text-cyan-300">&quot;Flutter&quot;</span>,{" "}
+                      <span className="text-cyan-300">&quot;Android SDK&quot;</span>,{" "}
+                      <span className="text-cyan-300">&quot;Firebase&quot;</span>],
                     </p>
                     <p>
-                      <span className="text-slate-400">focus:</span>{" "}
-                      <span className="text-purple-300">&quot;Performance &amp; Scalability&quot;</span>,
+                      <span className="text-slate-400">stateArchitecture:</span> [
+                      <span className="text-purple-300">&quot;BLoC&quot;</span>,{" "}
+                      <span className="text-purple-300">&quot;GetX&quot;</span>,{" "}
+                      <span className="text-purple-300">&quot;MVVM&quot;</span>],
                     </p>
                     <p>
-                      <span className="text-slate-400">openForRoles:</span>{" "}
+                      <span className="text-slate-400">education:</span>{" "}
+                      <span className="text-sky-300">&quot;B.E. IT (8.48 CGPA)&quot;</span>,
+                    </p>
+                    <p>
+                      <span className="text-slate-400">openForOpportunities:</span>{" "}
                       <span className="text-emerald-400 font-semibold">true</span>,
                     </p>
                   </div>

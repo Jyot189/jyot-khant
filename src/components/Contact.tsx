@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MapPin, Send, CheckCircle2, Copy, Check } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, Copy, Check, Phone } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { portfolioData } from "@/data/portfolioData";
 
@@ -88,6 +88,27 @@ export default function Contact() {
                     <Copy className="w-4 h-4" />
                   )}
                 </button>
+              </div>
+
+              {/* Phone Card */}
+              <div className="p-5 rounded-2xl glass-card border border-white/10 flex items-center justify-between group hover:border-cyan-500/40 transition-colors">
+                <div className="flex items-center gap-3.5 overflow-hidden">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-400 block font-medium">Direct Mobile</span>
+                    <a
+                      href={`tel:${personal.phone.replace(/[^0-9+]/g, "")}`}
+                      className="text-sm font-semibold text-white hover:text-emerald-400 block transition-colors"
+                    >
+                      {personal.phone}
+                    </a>
+                  </div>
+                </div>
+                <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Call / WhatsApp
+                </span>
               </div>
 
               {/* Location Card */}

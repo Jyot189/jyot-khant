@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
-  category: "Full Stack" | "Frontend" | "Backend / API" | "AI & Tools";
+  category: "Mobile (Flutter)" | "Android (Kotlin)" | "Cross-Platform" | "Accessibility & AI";
   tags: string[];
   githubUrl: string;
   liveUrl?: string;
@@ -18,9 +18,18 @@ export interface Experience {
   company: string;
   period: string;
   location: string;
-  type: "Full-Time" | "Internship" | "Freelance" | "Open Source";
+  type: "Full-Time" | "Internship" | "Contract" | "Open Source";
   description: string[];
   technologies: string[];
+}
+
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  period: string;
+  grade: string;
+  details: string;
 }
 
 export interface SkillCategory {
@@ -28,7 +37,6 @@ export interface SkillCategory {
   skills: {
     name: string;
     level: string;
-    icon?: string;
   }[];
 }
 
@@ -40,15 +48,15 @@ export interface PortfolioData {
     about: string[];
     location: string;
     email: string;
-    phone?: string;
+    phone: string;
     status: string;
-    avatarUrl?: string;
     resumeUrl: string;
+    resumePreviewImg: string;
     socials: {
       github: string;
       linkedin: string;
-      twitter?: string;
       email: string;
+      phone: string;
     };
   };
   metrics: {
@@ -56,6 +64,7 @@ export interface PortfolioData {
     value: string;
     description: string;
   }[];
+  education: Education[];
   skillCategories: SkillCategory[];
   experiences: Experience[];
   projects: Project[];
@@ -69,268 +78,256 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Jyot Khant",
-    role: "Full-Stack Software Developer",
+    role: "Mobile App Developer",
     tagline:
-      "Crafting high-performance, user-centric web applications and scalable digital solutions with modern technologies.",
+      "Passionate cross-platform mobile application developer crafting high-performance, elegant, and maintainable iOS & Android applications using Flutter, Dart, Kotlin, and modern state architectures.",
     about: [
-      "Hello! I am Jyot Khant, a passionate Software Engineer and Full-Stack Developer dedicated to building performant, accessible, and elegant software systems.",
-      "I specialize in modern JavaScript/TypeScript ecosystems including React, Next.js, Node.js, and modern CSS frameworks like Tailwind CSS. My focus is on turning complex architectural challenges into clean, intuitive, and delightful digital experiences.",
-      "When I am not coding, I actively explore new open-source technologies, optimize system architectures, and continuously expand my skill set in cloud deployments and cutting-edge software paradigms.",
+      "I am a passionate Mobile Application Developer who loves writing expressive, elegant, and maintainable code. With hands-on industry experience at ESparkBiz Technologies, I specialize in building smooth, scalable, and cross-platform apps for iOS and Android.",
+      "As an experienced Flutter developer, I am deeply proficient in Dart with industry-proven state management solutions like GetX, BLoC, and Riverpod. I pride myself on crafting intuitive, responsive UI/UX that feels natural and delivers consistent 60/120fps performance.",
+      "In native Android development, I leverage Kotlin and the MVVM architecture to architect robust background processes and resilient data pipelines. From Firebase integrations and RESTful APIs to automated CI/CD pipelines with CodeMagic, I deliver end-to-end mobile solutions from design to store deployment.",
     ],
-    location: "Gujarat, India (Open to Remote Worldwide)",
-    email: "jyotkhant@gmail.com",
-    phone: "+91 98765 43210",
-    status: "Available for Hire & Collaborative Projects",
+    location: "Valsad, Gujarat, India",
+    email: "jyotkhant2002@gmail.com",
+    phone: "(+91) 9725888368",
+    status: "Mobile App Developer at ESparkBiz Technologies",
     resumeUrl: "/jyot_khant_resume.pdf",
+    resumePreviewImg: "/resume-preview.png",
     socials: {
       github: "https://github.com/Jyot189",
       linkedin: "https://www.linkedin.com/in/jyot-khant",
-      twitter: "https://x.com/jyot_khant",
-      email: "mailto:jyotkhant@gmail.com",
+      email: "mailto:jyotkhant2002@gmail.com",
+      phone: "tel:+919725888368",
     },
   },
   metrics: [
     {
-      value: "15+",
-      label: "Projects Completed",
-      description: "From concept to full deployment",
+      value: "8.48",
+      label: "B.E. IT CGPA",
+      description: "A. D. Patel Institute of Tech",
     },
     {
-      value: "99.9%",
-      label: "Code Reliability",
-      description: "Clean architecture & robust tests",
+      value: "60+ fps",
+      label: "Smooth UI Performance",
+      description: "Optimized render pipelines",
     },
     {
-      value: "10+",
-      label: "Core Technologies",
-      description: "Modern web, cloud & API stacks",
+      value: "2+",
+      label: "Core Platforms",
+      description: "Android (Kotlin) & iOS (Flutter)",
     },
     {
       value: "100%",
-      label: "Commitment",
-      description: "Dedicated to top-tier delivery",
+      label: "Quality & Testing",
+      description: "Clean MVVM & BLoC state",
+    },
+  ],
+  education: [
+    {
+      id: "edu-1",
+      degree: "Bachelor of Engineering in Information Technology",
+      institution: "A. D. Patel Institute of Technology (CVM University)",
+      period: "2020 - 2024",
+      grade: "CGPA: 8.48",
+      details:
+        "Comprehensive coursework in Mobile Application Development, Data Structures, OOP, Database Systems, Operating Systems, and Software Engineering.",
+    },
+    {
+      id: "edu-2",
+      degree: "Higher Secondary Education (Science)",
+      institution: "Sett R. J. J. High School (GSHSEB)",
+      period: "2018 - 2020",
+      grade: "Percentile: 83.12 PR",
+      details:
+        "Focused study in Mathematics, Physics, and Computer Sciences with honors academic ranking.",
     },
   ],
   skillCategories: [
     {
-      title: "Frontend Engineering",
+      title: "Mobile Frameworks & Languages",
       skills: [
-        { name: "React.js", level: "Advanced" },
-        { name: "Next.js (App Router)", level: "Advanced" },
-        { name: "TypeScript", level: "Proficient" },
-        { name: "Tailwind CSS", level: "Expert" },
-        { name: "JavaScript (ES6+)", level: "Advanced" },
-        { name: "HTML5 / Semantic CSS", level: "Expert" },
-        { name: "Redux / Zustand", level: "Proficient" },
+        { name: "Flutter", level: "Expert" },
+        { name: "Dart", level: "Expert" },
+        { name: "Kotlin", level: "Advanced" },
+        { name: "Android SDK", level: "Advanced" },
+        { name: "iOS Deployment", level: "Proficient" },
       ],
     },
     {
-      title: "Backend & Systems",
+      title: "State Management & Architecture",
       skills: [
-        { name: "Node.js", level: "Proficient" },
-        { name: "Express.js", level: "Proficient" },
-        { name: "RESTful APIs", level: "Advanced" },
-        { name: "GraphQL", level: "Intermediate" },
-        { name: "Authentication (JWT, OAuth)", level: "Proficient" },
-        { name: "Python / Scripting", level: "Intermediate" },
+        { name: "BLoC Pattern", level: "Expert" },
+        { name: "GetX", level: "Expert" },
+        { name: "Riverpod", level: "Advanced" },
+        { name: "MVVM Architecture", level: "Advanced" },
+        { name: "Clean Architecture", level: "Proficient" },
       ],
     },
     {
-      title: "Databases & Cloud",
+      title: "Backend, Cloud & Databases",
       skills: [
-        { name: "PostgreSQL", level: "Proficient" },
-        { name: "MongoDB", level: "Proficient" },
-        { name: "Prisma ORM", level: "Proficient" },
-        { name: "Vercel / Netlify", level: "Advanced" },
-        { name: "Supabase / Firebase", level: "Proficient" },
-        { name: "AWS (S3, Lambda Basics)", level: "Intermediate" },
+        { name: "Firebase (Auth, Firestore, FCM)", level: "Advanced" },
+        { name: "RESTful APIs Integration", level: "Expert" },
+        { name: "SQLite / Room DB", level: "Advanced" },
+        { name: "Hive Local Storage", level: "Advanced" },
+        { name: "JSON Serialization", level: "Expert" },
       ],
     },
     {
-      title: "Tools & Methodologies",
+      title: "DevOps, CI/CD & Tools",
       skills: [
+        { name: "CodeMagic CI/CD", level: "Advanced" },
         { name: "Git & GitHub", level: "Advanced" },
-        { name: "CI / CD Pipelines", level: "Proficient" },
-        { name: "Docker Basics", level: "Intermediate" },
-        { name: "Postman / API Testing", level: "Advanced" },
-        { name: "Responsive UI/UX Design", level: "Expert" },
-        { name: "Performance Optimization", level: "Advanced" },
+        { name: "Android Studio", level: "Expert" },
+        { name: "VS Code", level: "Expert" },
+        { name: "Postman API Testing", level: "Advanced" },
       ],
     },
   ],
   experiences: [
     {
       id: "exp-1",
-      role: "Full-Stack Developer",
-      company: "Independent / Freelance Engineering",
-      period: "2024 - Present",
-      location: "Remote",
-      type: "Freelance",
-      description: [
-        "Architecting and shipping responsive, high-performance web applications using Next.js, React, and Node.js.",
-        "Developing robust REST APIs, securing authentication flows, and integrating cloud database solutions.",
-        "Collaborating with clients to translate business requirements into seamless, modern user interfaces with 99+ Google Lighthouse scores.",
-      ],
-      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Vercel"],
-    },
-    {
-      id: "exp-2",
-      role: "Frontend Developer & Open Source Contributor",
-      company: "Tech Projects & Community",
-      period: "2023 - 2024",
-      location: "India",
-      type: "Open Source",
-      description: [
-        "Engineered multiple dynamic client-side applications with complex state management and responsive styling.",
-        "Implemented clean component libraries, automated deployment workflows on Vercel, and optimized page load times by 40%.",
-        "Participated in code reviews, bug fixes, and continuous feature integration.",
-      ],
-      technologies: ["React", "JavaScript", "HTML/CSS", "Git", "GitHub Actions"],
-    },
-    {
-      id: "exp-3",
-      role: "Computer Science & Engineering",
-      company: "Higher Education / University",
-      period: "2021 - 2025",
+      role: "Mobile App Developer",
+      company: "ESparkBiz Technologies",
+      period: "Sep 2024 - Present",
       location: "India",
       type: "Full-Time",
       description: [
-        "Completed rigorous coursework in Data Structures, Algorithms, Database Management Systems, Computer Networks, and Software Engineering.",
-        "Led multiple capstone academic projects focusing on modern web development, API design, and distributed systems.",
+        "Developing high-performance cross-platform mobile applications in Flutter for Android and iOS devices.",
+        "Architecting robust and maintainable mobile systems using Dart with BLoC and GetX state management solutions.",
+        "Integrating secure REST APIs, Firebase real-time database, cloud authentication, and push notifications.",
+        "Configuring and managing automated mobile CI/CD build and release workflows using CodeMagic.",
+        "Profiling app performance, minimizing memory leaks, and achieving silky smooth 60fps animations.",
       ],
-      technologies: ["Data Structures", "Algorithms", "DBMS", "OOP", "Web Technologies"],
+      technologies: ["Flutter", "Dart", "BLoC", "GetX", "Firebase", "CodeMagic", "REST APIs", "Git"],
+    },
+    {
+      id: "exp-2",
+      role: "Intern - Mobile App Developer",
+      company: "ESparkBiz Technologies",
+      period: "Jan 2024 - Aug 2024",
+      location: "India",
+      type: "Internship",
+      description: [
+        "Learned and engineered mobile applications from scratch for both Android and iOS operating systems.",
+        "Built production native Android components in Kotlin using clean MVVM architecture for enhanced scalability.",
+        "Implemented local database caching using Room and SQLite for offline accessibility.",
+        "Collaborated with senior engineers on code reviews, bug fixes, and responsive UI optimization.",
+      ],
+      technologies: ["Kotlin", "Android SDK", "MVVM", "Flutter", "Dart", "Room DB", "Git"],
     },
   ],
   projects: [
     {
       id: "proj-1",
-      title: "NextGen SaaS Dashboard",
-      subtitle: "Enterprise Analytics & Team Management Platform",
+      title: "American Sign Language (ASL) Learning App",
+      subtitle: "Cross-Platform Inclusive EdTech Mobile Application",
       description:
-        "A full-featured SaaS web platform featuring real-time data charts, role-based authorization, team collaboration, and responsive dark/light themes.",
-      category: "Full Stack",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
+        "A cross-platform mobile application designed to help users learn and practice American Sign Language through interactive lessons, HD video demonstrations, and quizzes. Engineered with accessibility-first UI and performance optimization to bridge communication gaps between hearing and deaf individuals.",
+      category: "Accessibility & AI",
+      tags: ["Flutter", "Dart", "Firebase", "BLoC / GetX", "Video Player", "Accessibility"],
       githubUrl: "https://github.com/Jyot189",
-      liveUrl: "https://jyot-khant.vercel.app",
       featured: true,
       highlights: [
-        "Real-time interactive analytics visualization",
-        "Secure JWT authentication with role-based access",
-        "Sub-second page transitions powered by Next.js Server Components",
+        "Interactive gamified lessons with curated video sign demonstrations",
+        "Adaptive quiz engine with instant feedback and score tracking",
+        "High-contrast accessible UI supporting both hearing and deaf learners",
+        "Offline lesson caching for continuous learning anywhere",
       ],
-      stats: "99+ Lighthouse Score",
+      stats: "In Active Development",
     },
     {
       id: "proj-2",
-      title: "E-Commerce CommerceHub",
-      subtitle: "High-Performance Modern Online Storefront",
+      title: "PulseStore - E-Commerce Mobile App",
+      subtitle: "High-Performance Cross-Platform Shopping App",
       description:
-        "An optimized e-commerce web application featuring intuitive product browsing, dynamic filtering, persistent shopping cart, and Stripe checkout simulation.",
-      category: "Full Stack",
-      tags: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
+        "Modern mobile storefront built with Flutter featuring real-time product catalogs, instant category filtering, persistent shopping cart, and mock checkout workflows.",
+      category: "Mobile (Flutter)",
+      tags: ["Flutter", "Dart", "Firebase", "GetX", "REST APIs"],
       githubUrl: "https://github.com/Jyot189",
-      liveUrl: "https://jyot-khant.vercel.app",
       featured: true,
       highlights: [
-        "Instant search & multi-attribute filter system",
-        "Optimistic UI updates for cart and checkout",
-        "Complete REST API with order management backend",
+        "Instant search & multi-attribute filter with sub-100ms response",
+        "Persistent cart and favorites with GetX reactive state",
+        "Integrated Firebase Authentication with Google Sign-In",
       ],
-      stats: "Over 50+ Products Tested",
+      stats: "60 FPS Fluid Animations",
     },
     {
       id: "proj-3",
-      title: "DevPulse - Developer Social Network",
-      subtitle: "Community Platform for Tech Enthusiasts",
+      title: "ConnectPulse - Realtime Messaging App",
+      subtitle: "Cross-Platform Chat Application with Push Notifications",
       description:
-        "A developer platform to share code snippets, write tech blogs, discuss engineering problems, and follow peers.",
-      category: "Full Stack",
-      tags: ["Next.js", "Tailwind CSS", "Supabase", "Markdown Editor"],
+        "Full-featured mobile chat client supporting real-time direct messaging, online presence indicators, media sharing, and push notifications via Firebase Cloud Messaging.",
+      category: "Cross-Platform",
+      tags: ["Flutter", "Dart", "Firebase Firestore", "Riverpod", "FCM"],
       githubUrl: "https://github.com/Jyot189",
       featured: true,
       highlights: [
-        "Markdown-enabled rich post creation with syntax highlighting",
-        "Real-time comments, bookmarks, and upvote system",
-        "Clean responsive UI with mobile-first layout",
+        "Real-time message streaming powered by Firestore Listeners",
+        "Unread message badges and instant FCM push notifications",
+        "Lightweight media compression prior to cloud upload",
       ],
-      stats: "Full Real-time Sync",
+      stats: "Realtime Firebase Sync",
     },
     {
       id: "proj-4",
-      title: "TaskFlow Pro - Productivity Board",
-      subtitle: "Kanban Project & Sprint Management Tool",
+      title: "Native Android NewsFeed (Kotlin MVVM)",
+      subtitle: "Clean Architecture News Reader Application",
       description:
-        "A smooth drag-and-drop Kanban productivity suite designed for agile development teams and solo creators.",
-      category: "Frontend",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Zustand"],
+        "Native Android app architected in Kotlin following MVVM and Clean Architecture standards, leveraging Retrofit for REST APIs and Room for offline database caching.",
+      category: "Android (Kotlin)",
+      tags: ["Kotlin", "Android SDK", "MVVM", "Retrofit", "Room DB", "Coroutines"],
       githubUrl: "https://github.com/Jyot189",
       featured: false,
       highlights: [
-        "Smooth drag-and-drop task workflow",
-        "Offline local storage persistence",
-        "Custom tag labels, priority filters, and deadlines",
+        "Clean MVVM separation of concerns with LiveData & Coroutines",
+        "Offline-first architecture with automatic Room database caching",
+        "Material You dynamic theming and edge-to-edge layout",
       ],
-      stats: "Zero External Dependencies",
+      stats: "100% Kotlin Native",
     },
     {
       id: "proj-5",
-      title: "CloudVault - Secure File Storage API",
-      subtitle: "Microservice for Encrypted File Management",
+      title: "HabitForge - Daily Productivity & Habit Tracker",
+      subtitle: "Offline-First Habit Tracking Mobile App",
       description:
-        "A resilient REST microservice supporting chunked file uploads, AES-256 encryption at rest, and pre-signed URL generation.",
-      category: "Backend / API",
-      tags: ["Node.js", "Express", "AWS S3", "Docker", "Jest"],
+        "Intuitive habit and daily goal tracker built with Flutter, featuring visual streak charts, local reminders, and zero cloud dependency for complete privacy.",
+      category: "Mobile (Flutter)",
+      tags: ["Flutter", "Dart", "BLoC", "Hive Storage", "Local Notifications"],
       githubUrl: "https://github.com/Jyot189",
       featured: false,
       highlights: [
-        "Chunked multipart upload for large files",
-        "Automated unit & integration test coverage",
-        "Rate-limiting and token verification middleware",
+        "Ultra-fast local storage using Hive NoSQL key-value store",
+        "Visual streak calendars and completion percentage statistics",
+        "Customizable scheduled local push alerts",
       ],
-      stats: "100% Test Coverage",
-    },
-    {
-      id: "proj-6",
-      title: "AI Prompt Studio & Generator",
-      subtitle: "Interactive LLM Prompt Optimization Workspace",
-      description:
-        "An AI-powered developer tool that tests, refines, and formats generative prompts for OpenAI & Gemini models.",
-      category: "AI & Tools",
-      tags: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS"],
-      githubUrl: "https://github.com/Jyot189",
-      featured: false,
-      highlights: [
-        "Prompt variation comparison and token counter",
-        "One-click export to code templates (Python/JS)",
-        "History and preset bookmarking",
-      ],
-      stats: "Powered by Modern LLMs",
+      stats: "Zero Cloud Latency",
     },
   ],
   services: [
     {
-      title: "Full-Stack Web Development",
+      title: "Cross-Platform App Development",
       description:
-        "End-to-end modern web applications built with Next.js, React, Node.js, and clean database integrations.",
+        "End-to-end mobile applications built with Flutter and Dart, delivering native-grade iOS & Android performance from a single expressive codebase.",
+      icon: "Smartphone",
+    },
+    {
+      title: "Native Android (Kotlin & MVVM)",
+      description:
+        "Scalable native Android engineering with Kotlin, Coroutines, Room DB, and clean architectural patterns for maximum responsiveness.",
       icon: "Code2",
     },
     {
-      title: "Modern UI/UX Engineering",
+      title: "State Management Architecture",
       description:
-        "Pixel-perfect, accessible, and hyper-responsive interfaces crafted with Tailwind CSS and sleek animations.",
-      icon: "Layout",
+        "Production-grade state solutions utilizing BLoC, GetX, and Riverpod to guarantee predictable, bug-free, and testable app logic.",
+      icon: "Layers",
     },
     {
-      title: "API Design & Cloud Architecture",
+      title: "Firebase & CI/CD Cloud Automation",
       description:
-        "Robust REST & GraphQL APIs, secure authentication, database schemas, and seamless Vercel/cloud deployments.",
-      icon: "Server",
-    },
-    {
-      title: "Performance & SEO Optimization",
-      description:
-        "Speeding up web apps, improving Core Web Vitals, and implementing search engine optimization best practices.",
-      icon: "Zap",
+        "Seamless cloud backends with Firebase (Auth, Firestore, Cloud Messaging) and automated build & release pipelines with CodeMagic.",
+      icon: "Cpu",
     },
   ],
 };
