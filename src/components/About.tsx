@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { User, Smartphone, Code2, Layers, Zap, CheckCircle, GraduationCap, MapPin, Globe, Sparkles } from "lucide-react";
+import { User, Smartphone, Code2, Layers, Zap, CreditCard, CheckCircle, GraduationCap, MapPin, Globe, Sparkles } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function About() {
@@ -9,8 +9,8 @@ export default function About() {
 
   const iconMap: Record<string, React.ReactNode> = {
     Smartphone: <Smartphone className="w-6 h-6 text-cyan-400" />,
+    CreditCard: <CreditCard className="w-6 h-6 text-emerald-400" />,
     Zap: <Zap className="w-6 h-6 text-amber-400" />,
-    Layers: <Layers className="w-6 h-6 text-indigo-400" />,
     Code2: <Code2 className="w-6 h-6 text-sky-400" />,
   };
 
@@ -30,7 +30,7 @@ export default function About() {
             Engineering High-Performance Mobile Experiences
           </h2>
           <p className="mt-3 text-slate-400 max-w-2xl text-base sm:text-lg">
-            Cross-platform mobile specialist delivering native-grade iOS &amp; Android apps, Shorebird OTA code push, and scalable architectures.
+            Cross-platform mobile specialist delivering native-grade iOS &amp; Android apps, StoreKit In-App Subscriptions, Shorebird OTA code push, and scalable architectures.
           </p>
         </div>
 
@@ -51,15 +51,15 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-200">
                 <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>iOS &amp; In-App Subscriptions</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-slate-200">
+                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>Shorebird OTA Code Push</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-200">
                 <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>Native Android (Kotlin &amp; MVVM)</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-slate-200">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>BLoC, GetX &amp; Riverpod</span>
               </div>
             </div>
 

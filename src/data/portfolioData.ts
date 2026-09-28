@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
-  category: "Mobile (Flutter)" | "Cross-Platform" | "Accessibility & EdTech";
+  category: "Mobile (Flutter & iOS)" | "Cross-Platform" | "Accessibility & EdTech";
   tags: string[];
   liveUrl?: string;
   featured: boolean;
@@ -78,18 +78,19 @@ export const portfolioData: PortfolioData = {
     name: "Jyot Khant",
     role: "Mobile App Developer",
     tagline:
-      "Passionate cross-platform mobile application developer crafting high-performance, elegant iOS & Android applications using Flutter, Dart, Kotlin, Shorebird Code Push, and modern state architectures.",
+      "Passionate cross-platform mobile application developer crafting high-performance, elegant iOS & Android applications using Flutter, Dart, Kotlin, In-App Purchases / Subscriptions, Shorebird Code Push, and modern state architectures.",
     about: [
       "I am a passionate Mobile Application Developer who loves writing expressive, elegant, and maintainable code. With hands-on industry experience at ESparkBiz Technologies, I specialize in building smooth, scalable, and cross-platform apps deployed to both iOS (App Store) and Android (Google Play Store).",
+      "I have deep expertise in integrating In-App Purchases (IAP) and recurring subscription models (Apple StoreKit & Google Play Billing) with secure receipt verification, purchase restoration, and subscription lifecycle management.",
       "As an experienced Flutter developer, I am proficient in Dart with industry-proven state management solutions like GetX, BLoC, and Riverpod. I integrate cutting-edge tools like Shorebird for instant over-the-air (OTA) code updates, ensuring continuous zero-downtime hotfixes without waiting for app store review delays.",
-      "In native Android development, I leverage Kotlin and the MVVM architecture to build scalable, responsive, and robust mobile systems. From commercial deployments like PackTamam (Android & iOS) to accessibility-driven EdTech apps, I take full ownership from initial concept to store launch.",
+      "In native Android development, I leverage Kotlin and the MVVM architecture to build scalable, responsive, and robust mobile systems. From commercial deployments like PackTamam (Android & iOS) to live accessibility EdTech platforms like the ASL Learning App, I deliver end-to-end mobile solutions from design to store launch.",
     ],
     location: "Valsad, Gujarat, India",
     email: "jyotkhant2002@gmail.com",
     phone: "(+91) 9725888368",
     status: "Mobile App Developer at ESparkBiz Technologies",
-    resumeUrl: "/jyot_khant_resume.pdf",
-    resumePreviewImg: "/resume-preview.png",
+    resumeUrl: "/Jyot_Khant_Mobile_Developer_Resume.pdf",
+    resumePreviewImg: "/resume-preview-v2.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/jyot-khant",
       email: "mailto:jyotkhant2002@gmail.com",
@@ -103,9 +104,9 @@ export const portfolioData: PortfolioData = {
       description: "A. D. Patel Institute of Tech",
     },
     {
-      value: "60+ fps",
-      label: "Smooth UI Performance",
-      description: "Optimized render pipelines",
+      value: "IAP",
+      label: "In-App Subscriptions",
+      description: "StoreKit & Play Billing live",
     },
     {
       value: "Both",
@@ -135,10 +136,21 @@ export const portfolioData: PortfolioData = {
       skills: [
         { name: "Flutter", level: "Expert" },
         { name: "Dart", level: "Expert" },
-        { name: "Shorebird (Code Push)", level: "Advanced" },
+        { name: "iOS & App StoreKit", level: "Expert" },
+        { name: "In-App Purchases (IAP)", level: "Expert" },
         { name: "Kotlin", level: "Advanced" },
         { name: "Android SDK", level: "Advanced" },
-        { name: "iOS Deployment", level: "Expert" },
+        { name: "Shorebird (Code Push)", level: "Advanced" },
+      ],
+    },
+    {
+      title: "Monetization & In-App Subscriptions",
+      skills: [
+        { name: "Apple StoreKit Integration", level: "Expert" },
+        { name: "Google Play Billing", level: "Expert" },
+        { name: "Subscription Lifecycle & Webhooks", level: "Advanced" },
+        { name: "Receipt Verification & Security", level: "Advanced" },
+        { name: "Paywall UI/UX Optimization", level: "Expert" },
       ],
     },
     {
@@ -152,24 +164,14 @@ export const portfolioData: PortfolioData = {
       ],
     },
     {
-      title: "Backend, Cloud & Databases",
+      title: "Backend, Cloud & Tools",
       skills: [
         { name: "Firebase (Auth, Firestore, FCM)", level: "Advanced" },
-        { name: "RESTful APIs Integration", level: "Expert" },
-        { name: "SQLite / Room DB", level: "Advanced" },
-        { name: "Hive Local Storage", level: "Advanced" },
-        { name: "JSON Serialization", level: "Expert" },
-      ],
-    },
-    {
-      title: "DevOps, CI/CD & Mobile Tools",
-      skills: [
         { name: "Shorebird (OTA Code Push)", level: "Expert" },
         { name: "CodeMagic CI/CD", level: "Advanced" },
+        { name: "RESTful APIs Integration", level: "Expert" },
+        { name: "Xcode & TestFlight", level: "Expert" },
         { name: "Android Studio", level: "Expert" },
-        { name: "Xcode & TestFlight", level: "Advanced" },
-        { name: "Postman API Testing", level: "Advanced" },
-        { name: "App Store & Play Store Release", level: "Expert" },
       ],
     },
   ],
@@ -183,13 +185,14 @@ export const portfolioData: PortfolioData = {
       type: "Full-Time",
       description: [
         "Developing high-performance cross-platform mobile applications in Flutter deployed to both Android and iOS platforms.",
+        "Engineering In-App Purchases (IAP) and recurring subscription models for iOS and Android, handling receipt verification, purchase restoration, and entitlement checks.",
         "Integrating Shorebird Code Push to deliver instant over-the-air hotfixes and feature updates directly to users without app store delays.",
         "Architecting robust mobile applications using Dart with BLoC and GetX state management patterns.",
         "Integrating secure REST APIs, Firebase real-time database, cloud authentication, and push notifications.",
         "Configuring and managing automated mobile CI/CD build and release workflows using CodeMagic.",
         "Profiling app performance, minimizing memory leaks, and achieving silky smooth 60fps animations.",
       ],
-      technologies: ["Flutter", "Dart", "Shorebird", "BLoC", "GetX", "Firebase", "CodeMagic", "REST APIs"],
+      technologies: ["Flutter", "Dart", "In-App Purchases", "StoreKit", "Shorebird", "BLoC", "GetX", "Firebase", "CodeMagic", "REST APIs"],
     },
     {
       id: "exp-2",
@@ -214,7 +217,7 @@ export const portfolioData: PortfolioData = {
       subtitle: "Commercial Packaging & Food Packaging Solutions Ecosystem",
       description:
         "Production cross-platform mobile application developed and deployed to both Google Play Store (Android) and Apple App Store (iOS) for PackTamam (packtamam.com). Enables businesses and customers to explore innovative packaging solutions, access real-time product catalogs, submit packaging inquiries, and track orders.",
-      category: "Mobile (Flutter)",
+      category: "Mobile (Flutter & iOS)",
       tags: ["Flutter", "Dart", "Android Deployed", "iOS Deployed", "Shorebird", "Firebase", "REST APIs"],
       liveUrl: "https://www.packtamam.com/",
       featured: true,
@@ -229,19 +232,20 @@ export const portfolioData: PortfolioData = {
     {
       id: "proj-asl",
       title: "American Sign Language (ASL) Learning App",
-      subtitle: "Cross-Platform Inclusive EdTech Mobile Application",
+      subtitle: "Live Inclusive EdTech Mobile Application with In-App Subscriptions",
       description:
-        "A cross-platform mobile application designed to help users learn and practice American Sign Language through interactive lessons, HD video demonstrations, and quizzes. Engineered with accessibility-first UI and performance optimization to bridge communication gaps between hearing and deaf individuals.",
+        "Live cross-platform mobile application deployed on iOS and Android designed to help users learn and practice American Sign Language through interactive lessons, HD video demonstrations, and quizzes. Features seamless In-App Purchases (IAP) & recurring subscriptions for premium lessons, personalized progress tracking, and inclusive accessibility.",
       category: "Accessibility & EdTech",
-      tags: ["Flutter", "Dart", "Firebase", "BLoC / GetX", "Video Player", "Accessibility"],
+      tags: ["Flutter", "Dart", "iOS & Android Live", "In-App Purchases (IAP)", "StoreKit Subscriptions", "Firebase", "Accessibility"],
       featured: true,
       highlights: [
-        "Interactive gamified lessons with curated video sign demonstrations",
-        "Adaptive quiz engine with instant feedback and score tracking",
-        "High-contrast accessible UI supporting both hearing and deaf learners",
-        "Offline lesson caching for continuous learning anywhere",
+        "Live production mobile app with complete iOS and Android deployments",
+        "Engineered In-App Purchases (IAP) and recurring subscription models (StoreKit & Play Billing) for premium tiered content",
+        "Interactive gamified lessons with curated video sign demonstrations and gesture recognition aids",
+        "Adaptive quiz engine with instant validation and cloud score synchronization powered by Firebase",
+        "High-contrast accessible UI supporting both hearing and deaf learners with offline caching",
       ],
-      stats: "In Active Development",
+      stats: "Live on App Store & Play Store",
     },
   ],
   services: [
@@ -252,19 +256,19 @@ export const portfolioData: PortfolioData = {
       icon: "Smartphone",
     },
     {
+      title: "In-App Purchases & Subscriptions",
+      description:
+        "Complete Apple StoreKit & Google Play Billing integrations, subscription lifecycle handling, paywall UX, and secure receipt verification.",
+      icon: "CreditCard",
+    },
+    {
       title: "Shorebird OTA Code Push",
       description:
         "Instant over-the-air Flutter updates and instant hotfixes with Shorebird, skipping prolonged app store review bottlenecks.",
       icon: "Zap",
     },
     {
-      title: "State Management & Architecture",
-      description:
-        "Production-grade state solutions utilizing BLoC, GetX, and Riverpod to guarantee predictable, bug-free, and testable app logic.",
-      icon: "Layers",
-    },
-    {
-      title: "Native Android (Kotlin & MVVM)",
+      title: "Native Android & Clean Architecture",
       description:
         "Clean MVVM native Android architecture with Kotlin, Coroutines, Room local DB, and seamless RESTful API network integration.",
       icon: "Code2",
